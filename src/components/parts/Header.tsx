@@ -1,15 +1,6 @@
 import { cn, useScrollDetect } from "@/lib/utils";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Diamond, Mail, MessageCircle, Phone } from "lucide-react";
-import { buttonVariants } from "../ui/button";
+import { AlignJustify, ArrowRight, Diamond, Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
@@ -18,64 +9,38 @@ import img2 from "../../assets/images/long-shot-la-salve-bridge-night-with-highw
 import img3 from "../../assets/images/photovoltaic-solar-power-panel-field-green-clean-alternative-power-energy-concept-ai-generative.jpg";
 import img4 from "../../assets/images/sunset-sky-reflects-solar-panel-sustainable-power-generation-generative-ai.jpg";
 import img5 from "../../assets/images/view-futuristic-mystical-other-worldly-sky.jpg";
-import React from "react";
+import { useRef, useState } from "react";
 import {
+  Box,
   Button,
   Em,
+  Flex,
   Heading,
   IconButton,
+  Inset,
+  Popover,
   Separator,
   Text,
 } from "@radix-ui/themes";
-
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-];
+import {
+  HoveredLink,
+  Menu,
+  MenuItem,
+  ProductItem,
+} from "../ui/navigation-menu";
 
 const images = [
   {
     img: img1,
     comp: (
-      <div className="absolute inset-x-0 top-40 gap-2 px-10 justify-between flex">
+      <div className="absolute inset-x-0 md:top-40 gap-2 px-10 justify-between flex flex-col md:flex-row">
         <div className="flex flex-col gap-2 mt-24">
-          <Heading size={"9"}>SINCE 2024</Heading>
+          <Heading size={"9"} className="mt-24">
+            SINCE <span className="text-[var(--accent-9)]">2024</span>
+          </Heading>
           <Text>Solar Solutions, Go Solar with Haido Electrics</Text>
-          <div className="mt-8">
-            <Button size={"4"}>
+          <div className="mt-2 md:mt-8">
+            <Button size={{ lg: "4" }}>
               More Haido Solar <ArrowRight />
             </Button>
           </div>
@@ -84,7 +49,7 @@ const images = [
           <div className="flex flex-col gap-2">
             <Heading size={"7"}>10+</Heading>
             <div className="flex justify-between items-center ">
-              <Text>Years in SOlar Industry</Text>
+              <Text>Years in Solar Industry</Text>
               <IconButton>
                 <Diamond />
               </IconButton>
@@ -162,14 +127,14 @@ const images = [
   {
     img: img2,
     comp: (
-      <div className="absolute justify-center inset-0 mx-auto text-center top-56 px-10 h-full w-full container  items-center">
-        <div className="px-20 container">
-          <Heading size={"9"} mb={"6"}>
+      <div className="absolute justify-center inset-0 mx-auto text-center md:top-56 md:px-10 h-full w-full md:container  items-center">
+        <div className="md:px-20 mt-48 md:mt-32 container">
+          <Heading size={"9"} mb={"6"} className="mt-24">
             Haido Electrics.
           </Heading>
-          <div className="bg-slate-900/30 p-4">
-            <Text size={"6"}>
-              <Em className=" p-1">
+          <div className="md:bg-slate-900/30 bg-slate-900/90 backdrop-blur-sm p-4">
+            <Text size={{ md: "6" }}>
+              <Em className="p-1">
                 Anern has 10+ years of experience in the lighting industry. We
                 have introduced advanced production equipment, a specialized
                 production line, excellent R & D team, for you to customize
@@ -186,14 +151,14 @@ const images = [
   {
     img: img3,
     comp: (
-      <div className="absolute justify-center inset-0 mx-auto text-center top-56 px-10 h-full w-full container  items-center">
-        <div className=" px-20 container">
-          <Heading size={"9"} mb={"6"}>
+      <div className="absolute justify-center inset-0 mx-auto text-center md:top-56 md:px-10 h-full w-full md:container  items-center">
+        <div className="md:px-20 mt-48 md:mt-32 container">
+          <Heading size={"9"} mb={"6"} className="mt-24">
             Solar Street Light.
           </Heading>
-          <div className="bg-slate-900/30 p-4">
-            <Text size={"6"}>
-              <Em className=" p-1">
+          <div className="md:bg-slate-900/30 bg-slate-900/90 backdrop-blur-sm p-4">
+            <Text size={{ md: "6" }}>
+              <Em className="p-1">
                 Anern has 10+ years of experience in the lighting industry. We
                 have introduced advanced production equipment, a specialized
                 production line, excellent R & D team, for you to customize
@@ -202,11 +167,6 @@ const images = [
                 certification requirements for different countries.
               </Em>
             </Text>
-          </div>
-          <div>
-            <Button size={"4"} mt={"6"}>
-              More on Solar Street Light <ArrowRight />
-            </Button>
           </div>
         </div>
       </div>
@@ -215,14 +175,14 @@ const images = [
   {
     img: img4,
     comp: (
-      <div className="absolute justify-center inset-0 mx-auto text-center top-56 px-10 h-full w-full container  items-center">
-        <div className=" px-20 container">
-          <Heading size={"9"} mb={"6"}>
+      <div className="absolute justify-center inset-0 mx-auto text-center md:top-56 md:px-10 h-full w-full md:container  items-center">
+        <div className="md:px-20 mt-48 md:mt-32 container">
+          <Heading size={"9"} mb={"6"} className="mt-24">
             Solar Panel.
           </Heading>
-          <div className="bg-slate-900/30 p-4">
-            <Text size={"6"}>
-              <Em className=" p-1">
+          <div className="md:bg-slate-900/30 bg-slate-900/90 backdrop-blur-sm p-4">
+            <Text size={{ md: "6" }}>
+              <Em className="p-1">
                 Anern has 10+ years of experience in the lighting industry. We
                 have introduced advanced production equipment, a specialized
                 production line, excellent R & D team, for you to customize
@@ -231,11 +191,6 @@ const images = [
                 certification requirements for different countries.
               </Em>
             </Text>
-          </div>
-          <div>
-            <Button size={"4"} mt={"6"}>
-              More on Solar Panel <ArrowRight />
-            </Button>
           </div>
         </div>
       </div>
@@ -244,14 +199,14 @@ const images = [
   {
     img: img5,
     comp: (
-      <div className="absolute justify-center inset-0 mx-auto text-center top-56 px-10 h-full w-full container  items-center">
-        <div className=" px-20 container">
-          <Heading size={"9"} mb={"6"}>
+      <div className="absolute justify-center inset-0 mx-auto text-center md:top-56 md:px-10 h-full w-full md:container  items-center">
+        <div className="md:px-20 mt-48 md:mt-32 container">
+          <Heading size={"9"} mb={"6"} className="mt-24">
             Hybrid Solar Inverter.
           </Heading>
-          <div className="bg-slate-900/30 p-4">
-            <Text size={"6"}>
-              <Em className=" p-1 ">
+          <div className="md:bg-slate-900/30 bg-slate-900/90 backdrop-blur-sm p-4">
+            <Text size={{ md: "6" }}>
+              <Em className="p-1">
                 Anern has 10+ years of experience in the lighting industry. We
                 have introduced advanced production equipment, a specialized
                 production line, excellent R & D team, for you to customize
@@ -261,234 +216,229 @@ const images = [
               </Em>
             </Text>
           </div>
-
-          <div>
-            <Button size={"4"} mt={"6"}>
-              More on Hybrid Solar Inverter <ArrowRight />
-            </Button>
-          </div>
         </div>
       </div>
     ),
   },
 ];
 
-export function MenuNavigation() {
+function Navbar({
+  className,
+  isScrolling,
+}: {
+  className?: string;
+  isScrolling: boolean;
+}) {
+  const [active, setActive] = useState<string | null>(null);
   return (
-    <NavigationMenu className="container">
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className={buttonVariants()}>
-            Solar & LED Light
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <MessageCircle className="h-6 w-6" />
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components that you can copy and
-                      paste into your apps. Accessible. Customizable. Open
-                      Source.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className={buttonVariants()}>
-            Solar Power System
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className={buttonVariants()}>
-            Solutions
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <MessageCircle className="h-6 w-6" />
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components that you can copy and
-                      paste into your apps. Accessible. Customizable. Open
-                      Source.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/docs">
-            <NavigationMenuLink className={buttonVariants()}>
+    <div className={cn("z-50", className)}>
+      <div className="hidden md:block">
+        <Menu setActive={setActive}>
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item="Solar & LED Light"
+            isScrolling={isScrolling}
+          >
+            <div className="flex flex-col space-y-4 text-sm z-50">
+              <HoveredLink href="/web-dev">Web Development</HoveredLink>
+              <HoveredLink href="/interface-design">
+                Interface Design
+              </HoveredLink>
+              <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
+              <HoveredLink href="/branding">Branding</HoveredLink>
+            </div>
+          </MenuItem>
+          <MenuItem
+            isScrolling={isScrolling}
+            setActive={setActive}
+            active={active}
+            item="Solar Power System"
+          >
+            <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+              <ProductItem
+                title="Algochurn"
+                href="https://algochurn.com"
+                src="https://assets.aceternity.com/demos/algochurn.webp"
+                description="Prepare for tech interviews like never before."
+              />
+              <ProductItem
+                title="Tailwind Master Kit"
+                href="https://tailwindmasterkit.com"
+                src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                description="Production ready Tailwind css components for your next project"
+              />
+              <ProductItem
+                title="Moonbeam"
+                href="https://gomoonbeam.com"
+                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
+                description="Never write from scratch again. Go from idea to blog in minutes."
+              />
+              <ProductItem
+                title="Rogue"
+                href="https://userogue.com"
+                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              />
+            </div>
+          </MenuItem>
+          <MenuItem
+            isScrolling={isScrolling}
+            setActive={setActive}
+            active={active}
+            item="Solutions"
+          >
+            <div className="flex flex-col space-y-4 text-sm">
+              <HoveredLink href="/hobby">Hobby</HoveredLink>
+              <HoveredLink href="/individual">Individual</HoveredLink>
+              <HoveredLink href="/team">Team</HoveredLink>
+              <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+            </div>
+          </MenuItem>
+          <Box>
+            <Link
+              href="/docs"
+              className={cn("text-white", isScrolling && "text-primary")}
+            >
               About Us
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/docs">
-            <NavigationMenuLink className={buttonVariants()}>
+            </Link>
+          </Box>
+          <Box>
+            <Link
+              className={cn("text-white", isScrolling && "text-primary")}
+              href="/docs"
+            >
               Contact Us
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+            </Link>
+          </Box>
+        </Menu>
+      </div>
+      <div
+        className={cn(
+          "md:hidden relative top-10  w-full bg-transparent flex justify-end p-4 shadow-md",
+          isScrolling && "fixed top-0 bg-[var(--accent-1)]"
+        )}
+      >
+        <div>
+          <Popover.Root>
+            <Popover.Trigger>
+              <Button radius="full" size={"3"}>
+                <AlignJustify width="16" height="16" />
+              </Button>
+            </Popover.Trigger>
+            <Popover.Content width="360px">
+              <Flex className="flex-col gap-4 rounded-none">
+                <Link
+                  className="hover:bg-primary p-2 hover:text-white"
+                  href="/docs"
+                >
+                  Solar & LED Light
+                </Link>
+                <Link
+                  className="hover:bg-primary p-2 hover:text-white"
+                  href="/docs"
+                >
+                  Solar Power System
+                </Link>
+                <Link
+                  className="hover:bg-primary p-2 hover:text-white"
+                  href="/docs"
+                >
+                  Solutions
+                </Link>
+                <Link
+                  className="hover:bg-primary p-2 hover:text-white"
+                  href="/docs"
+                >
+                  About Us
+                </Link>
+                <Link
+                  className="hover:bg-primary p-2 hover:text-white"
+                  href="/docs"
+                >
+                  Contact Us
+                </Link>
+              </Flex>
+            </Popover.Content>
+          </Popover.Root>
+        </div>
+      </div>
+    </div>
   );
 }
-
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = "ListItem";
 
 export function Header() {
   const { isScrolling } = useScrollDetect();
 
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: false })
-  );
+  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: false }));
 
   return (
-    <div className="">
-      <Carousel plugins={[plugin.current]} className="w-full">
-        <div className="fixed z-50 w-full top-0 inset-x-0 ">
-          <div
-            className={cn(
-              "p-2 border-b border-slate-600 justify-between ",
-              isScrolling ? "hidden" : "flex"
-            )}
-          >
-            <Link to="/" className="text-primary-50">
-              <Heading size={"8"}>HAIDOELECTRICS</Heading>
-            </Link>
-            <div className="flex gap-10 ">
-              <div className="md:flex grid gap-1 md:gap-10 text-primary-50 text-xs items-center md:flex-row">
-                <div className="flex items-center gap-4">
-                  <div className="bg-secondary/20 p-2 rounded-full">
-                    <Phone className="text-primary-50 h-4 w-4" />
-                  </div>
-
-                  <div className="flex flex-col">
-                    <span>+234(0)7020334144</span>
-                    <span>+234(0)8032844178</span>
-                  </div>
+    <Carousel plugins={[plugin.current]} className="w-full">
+      <Inset className="z-10 fixed w-full text-white">
+        <div
+          className={cn(
+            "p-2 border-b border-slate-600 justify-between items-center",
+            isScrolling ? "hidden" : "flex "
+          )}
+        >
+          <Link to="/" className="text-primary-50">
+            <Heading size={"5"}>HAIDO</Heading>
+          </Link>
+          <Flex gap={"9"}>
+            <div className="md:flex grid gap-1 md:gap-10 text-primary-50 text-xs items-center md:flex-row">
+              <div className="flex items-center gap-4">
+                <div className="bg-secondary/20 p-2 rounded-full">
+                  <Phone className="text-primary-50 h-4 w-4" />
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="bg-secondary/20 p-2 rounded-full">
-                    <Mail className="text-primary-50 h-4 w-4" />
-                  </div>
-                  <span>info@haidoelectrics.com</span>
+                <div className="flex flex-col">
+                  <span>+234(0)7020334144</span>
+                  <span>+234(0)8032844178</span>
                 </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="bg-secondary/20 p-2 rounded-full">
+                  <Mail className="text-primary-50 h-4 w-4" />
+                </div>
+                <span>info@haidoelectrics.com</span>
               </div>
             </div>
-          </div>
-
-          <motion.div
-            initial={{
-              opacity: isScrolling ? 0 : 1,
-            }}
-            animate={{
-              opacity: 1,
-            }}
-            className={cn(
-              "w-full p-4 @container shadow-md top-0",
-              isScrolling ? "relative bg-[var(--accent-1)]" : "md:mt-10  fixed"
-            )}
-          >
-            <MenuNavigation />
-          </motion.div>
+          </Flex>
         </div>
 
-        <CarouselContent>
-          {images.map((image, index) => (
-            <CarouselItem key={index}>
-              <div
-                className="relative h-[45rem] lg:h-[55rem] w-full bg-cover text-[var(--accent-1)]"
-                onMouseEnter={plugin.current.stop}
-                onMouseLeave={() => {
-                  plugin.current.reset, plugin.current.play();
-                }}
-                style={{ backgroundImage: `url(${image.img})` }}
-              >
-                {image.comp}
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-      </Carousel>
-    </div>
+        <motion.div
+          initial={{
+            opacity: isScrolling ? 0 : 1,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+        ></motion.div>
+      </Inset>
+      <Navbar
+        isScrolling={isScrolling}
+        className={cn(
+          "fixed w-full mt-12 md:shadow-md  md:bg-slate-50/10",
+          isScrolling && "md:bg-[var(--accent-1)] mt-0"
+        )}
+      />
+      <CarouselContent>
+        {images.map((image, index) => (
+          <CarouselItem key={index}>
+            <div
+              className="relative h-[50rem] lg:h-[55rem] w-full bg-cover text-[var(--accent-1)]"
+              onMouseEnter={plugin.current.stop}
+              onMouseLeave={() => {
+                plugin.current.reset, plugin.current.play();
+              }}
+              style={{ backgroundImage: `url(${image.img})` }}
+            >
+              {image.comp}
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
   );
 }

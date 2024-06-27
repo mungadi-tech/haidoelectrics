@@ -1,41 +1,77 @@
-import { Button, Card, Heading, Text } from "@radix-ui/themes";
-import React from "react";
+import {
+  Box,
+  Button,
+  Card,
+  Container,
+  Flex,
+  Grid,
+  Heading,
+  Inset,
+  Section,
+  Text,
+} from "@radix-ui/themes";
 import img1 from "../../assets/images/long-shot-la-salve-bridge-night-with-highway-lights-unique-bridge-arc-bilbao-spain.jpg";
 import { CircleArrowRight } from "lucide-react";
+import Reveal from "@/lib/Reveal";
 
 export function About() {
   return (
-    <div
-      className="mt-20 mb-40 bg-cover relative"
-      style={{ backgroundImage: `url(${img1})` }}
-    >
-      <div className="bg-slate-50/80 h-full w-full py-20">
-        <h1 className="text-7xl my-10 text-center">About Us</h1>
-        <div className="grid grid-cols-2 gap-24 container">
-          <Card>
-            <img className="absolute inset-0 h-full w-full" src={img1} alt="" />
-          </Card>
+    <Reveal>
+      <Box
+        className="animate-reveal_animate"
+        mt={"9"}
+        style={{ backgroundImage: `url(${img1})`, backgroundSize: "cover" }}
+      >
+        <Box p={{ initial: "4", lg: "9" }} className="bg-slate-50/80">
+          <Heading size={"9"} align={"center"} mb={"9"}>
+            About Us
+          </Heading>
+          <Container p={"4"}>
+            <Grid columns={{ sm: "1", md: "2" }} gap={"6"}>
+              <Card>
+                <Inset className="h-64 md:h-72">
+                  <img
+                    className="md:h-full insex-0 absolute  w-full"
+                    src={img1}
+                    alt=""
+                  />
+                </Inset>
+              </Card>
 
-          <div className="flex flex-col gap-10">
-            <Text size={{ initial: "3", md: "6", lg: "6", xl: "6" }}>
-              Established in 2009, Anern has been adhering to the concept of
-              continuous self-transcendence and seeking common growth. Committed
-              to making the world better with green energy solutions, efficient
-              lighting, and energy-saving technologies. Through innovative
-              technology, advanced production equipment and an excellent R&D
-              team, Anern has provided high-quality solar energy products and
-              satisfactory services to more than 10,000 users around the world.
-            </Text>
-            <div>
-              <Button size={"4"}>
-                Know More <CircleArrowRight />
-              </Button>
-            </div>
-          </div>
-        </div>
-        <Partners />
-      </div>
-    </div>
+              <Flex gap={"5"} direction={"column"}>
+                <Box>
+                  <Text size={{ initial: "1", md: "5", lg: "5", xl: "5" }}>
+                    Established in 2009, Anern has been adhering to the concept
+                    of continuous self-transcendence and seeking common growth.
+                    Committed to making the world better with green energy
+                    solutions, efficient lighting, and energy-saving
+                    technologies. Through innovative technology, advanced
+                    production equipment and an excellent R&D team, Anern has
+                    provided high-quality solar energy products and satisfactory
+                    services to more than 10,000 users around the world.
+                  </Text>
+                  <br />
+                  <Text size={{ initial: "1", md: "5", lg: "5", xl: "5" }}>
+                    Committed to making the world better with green energy
+                    solutions, efficient lighting, and energy-saving
+                    technologies. Through innovative technology, advanced
+                    production equipment and an excellent R&D team, Anern has
+                    provided high-quality solar energy products and satisfactory
+                    services to more than 10,000 users around the world.
+                  </Text>
+                </Box>
+                <Box>
+                  <Button size={"1"}>
+                    Know More <CircleArrowRight height={14} width={14} />
+                  </Button>
+                </Box>
+              </Flex>
+            </Grid>
+          </Container>
+          <Partners />
+        </Box>
+      </Box>
+    </Reveal>
   );
 }
 
@@ -52,23 +88,24 @@ const press = [
 
 export function Partners() {
   return (
-    <section className="flex flex-col justify-center items-center py-14 mt-20">
-      <Heading
-        size={"8"}
-        className="text-center text-sm font-semibold text-gray-500"
-      >
-        PARTNERS
-      </Heading>
-      <div className="container relative mt-6 grid grid-cols-2 lg:grid-cols-8 gap-4 justify-center items-center">
-        {press.map((logo, idx) => (
-          <img
-            key={idx}
-            src={`https://cdn.magicui.design/press/${logo}.svg`}
-            className="px-2 dark:brightness-0 dark:invert"
-            alt={logo}
-          />
-        ))}
-      </div>
-    </section>
+    <Section>
+      <Flex direction={"column"} justify={"center"} align={"center"}>
+        <Heading size={"8"} align={"center"} color="gray">
+          PARTNERS
+        </Heading>
+        <Container mt={"6"}>
+          <Grid columns={{ initial: "2", lg: "8" }} gap={"4"}>
+            {press.map((logo, idx) => (
+              <img
+                key={idx}
+                src={`https://cdn.magicui.design/press/${logo}.svg`}
+                className="px-2 dark:brightness-0 dark:invert"
+                alt={logo}
+              />
+            ))}
+          </Grid>
+        </Container>
+      </Flex>
+    </Section>
   );
 }

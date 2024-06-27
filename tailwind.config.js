@@ -1,4 +1,3 @@
-import tailwintAnimate from "tailwindcss-animate";
 import containerQueries from "@tailwindcss/container-queries";
 
 /** @type {import('tailwindcss').Config} */
@@ -76,5 +75,5 @@ export default {
       },
     },
   },
-  plugins: [tailwintAnimate, containerQueries],
+  plugins: [require("tailwindcss-animate"), containerQueries],
 };

@@ -1,12 +1,15 @@
 import {
   Badge,
+  Box,
   Button,
   Card,
+  Container,
   Flex,
+  Grid,
   Heading,
   Inset,
-  Section,
   Separator,
+  Text,
 } from "@radix-ui/themes";
 import { MoreHorizontal } from "lucide-react";
 import {
@@ -18,93 +21,104 @@ import {
 } from "@/components/ui/carousel";
 
 import img1 from "../../assets/images/beautiful-urban-view.jpg";
+import Reveal from "@/lib/Reveal";
 
 export function MoreInfo() {
   const date = new Date().toLocaleString();
   return (
-    <Section>
-      <div className="text-7xl text-center text-balance mb-20">
-        Find The Information you Need
-      </div>
-      <div className="container grid lg:grid-cols-2 gap-10">
-        <div>
-          <Heading size={"8"}>News</Heading>
-          <div className="flex items-center mt-2">
-            <div className="p-0.5 bg-primary w-10" />
-            <Separator size={"4"} />
-          </div>
+    <Reveal>
+      <Container p={"4"}>
+        <Heading size={"9"} align={"center"} mb={"9"}>
+          Find The Information you Need
+        </Heading>
+        <Grid columns={{ initial: "1", md: "2" }} gap={"9"}>
+          <Box>
+            <Heading size={"8"}>News</Heading>
+            <Flex align={"center"} mt={"2"}>
+              <span className="p-0.5 bg-primary w-10" />
+              <Separator size={"4"} />
+            </Flex>
 
-          <Flex gap={"2"} direction={"column"} mt={"4"}>
-            <Card>
-              <div className="grid grid-cols-2 gap-4">
-                <Inset>
-                  <img
-                    src={img1}
-                    alt=""
-                    className="w-96 lg:w-72 absolute inset-0 rounded-none"
-                  />
-                </Inset>
-                <div className="p-2 relative">
-                  <div>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  </div>
-                  <div className="flex justify-between mt-4 items-center">
-                    <Badge variant="soft" radius="full">
-                      {date}
-                    </Badge>
-                    <Button>
-                      <span>Know more</span>
+            <Flex gap={"6"} direction={"column"} mt={"4"}>
+              <Card variant="ghost">
+                <Grid columns={{ md: "2", sm: "1" }} gap={"4"}>
+                  <Inset>
+                    <img src={img1} alt="" className="h-full" />
+                  </Inset>
+                  <Flex p={"2"} direction={"column"}>
+                    <Text>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </Text>
+                    <Flex
+                      justify={"between"}
+                      direction={{ initial: "row", lg: "column", md: "row" }}
+                      gap={"2"}
+                      mt={"4"}
+                    >
+                      <Badge size={"3"} variant="soft" radius="full">
+                        {date}
+                      </Badge>
+                      <Button>
+                        Know more <MoreHorizontal />
+                      </Button>
+                    </Flex>
+                  </Flex>
+                </Grid>
+              </Card>
+              <Card variant="ghost">
+                <Grid columns={{ md: "2", sm: "1" }} gap={"4"}>
+                  <Inset>
+                    <img src={img1} alt="" className="h-full" />
+                  </Inset>
+                  <Flex p={"2"} direction={"column"}>
+                    <Text>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </Text>
+                    <Flex
+                      justify={"between"}
+                      direction={{ initial: "row", lg: "column", md: "row" }}
+                      gap={"2"}
+                      mt={"4"}
+                    >
+                      <Badge size={"3"} variant="soft" radius="full">
+                        {date}
+                      </Badge>
+                      <Button>
+                        Know more <MoreHorizontal />
+                      </Button>
+                    </Flex>
+                  </Flex>
+                </Grid>
+              </Card>
+            </Flex>
+          </Box>
 
-                      <MoreHorizontal />
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </Card>
-            <Card>
-              <div className="grid grid-cols-2 gap-4">
-                <Inset>
-                  <img
-                    src={img1}
-                    alt=""
-                    className="w-96 lg:w-72 absolute inset-0 rounded-none"
-                  />
-                </Inset>
-                <div className="p-2 relative">
-                  <div>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  </div>
-                  <div className="flex justify-between mt-4 items-center">
-                    <Badge variant="soft" radius="full">
-                      {date}
-                    </Badge>
-                    <Button>
-                      <span>Know more</span>
+          <Box>
+            <Heading size={"8"}>Projects</Heading>
+            <Flex align={"center"} mt={"2"}>
+              <span className="p-0.5 bg-primary w-10" />
+              <Separator size={"4"} />
+            </Flex>
+            <Container p={"6"}>
+              <ProjectsCarousel />
+            </Container>
 
-                      <MoreHorizontal />
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </Flex>
-        </div>
-
-        <div>
-          <Heading size={"8"}>Projects</Heading>
-          <div className="flex items-center mt-2">
-            <div className="p-0.5 bg-primary w-10" />
-            <Separator size={"4"} />
-          </div>
-
-          <Flex mt={"4"} direction={"column"}>
-            <ProjectsCarousel />
-          </Flex>
-        </div>
-      </div>
-    </Section>
+            <Container px="7">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
+              iusto architecto alias non nisi earum, obcaecati quia ab
+              accusantium id recusandae, soluta placeat repellendus deleniti
+              error odit veritatis accusamus labore.
+            </Container>
+            <Container px="7" py={"1"}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
+              iusto architecto alias non nisi earum, obcaecati quia ab
+            </Container>
+          </Box>
+        </Grid>
+      </Container>
+    </Reveal>
   );
 }
 

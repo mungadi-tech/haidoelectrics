@@ -65,3 +65,24 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* .__reveal_animate {
+  animation: reveal linear both;
+
+  animation-duration: 1ms;
+  animation-timeline: view();
+  animation-range: 50% cover 50%;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    scale: 0;
+    background-color: brown;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    background-color: red;
+  }
+} */

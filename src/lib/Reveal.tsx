@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { motion, useAnimation, useInView } from "framer-motion";
-import React, { ReactNode, useEffect, useRef } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 
 export default function Reveal({
   children,

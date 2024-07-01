@@ -8,7 +8,21 @@ import {
   MotionValue,
 } from "framer-motion";
 import { Link } from "@tanstack/react-router";
-
+import sol1 from "../../assets/images/l1.png";
+import sol2 from "../../assets/images/s5.png";
+import sol3 from "../../assets/images/c1.jpg";
+import sol4 from "../../assets/images/view-futuristic-mystical-other-worldly-sky.jpg";
+import sol5 from "../../assets/images/l2.png";
+import sol6 from "../../assets/images/s8.png";
+import sol7 from "../../assets/images/long-shot-la-salve-bridge-night-with-highway-lights-unique-bridge-arc-bilbao-spain.jpg";
+import sol8 from "../../assets/images/c3.jpg";
+import sol9 from "../../assets/images/s7.png";
+import sol10 from "../../assets/images/s8.png";
+import sol11 from "../../assets/images/c4.jpg";
+import sol12 from "../../assets/images/s1.png";
+import sol13 from "../../assets/images/s2.png";
+import sol14 from "../../assets/images/s3.png";
+import sol15 from "../../assets/images/s4.png";
 const ProjectParallax = ({
   products,
 }: {
@@ -110,9 +124,11 @@ const Header = () => {
         System & Lighting Solutions
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+        We sell beautiful solar hybrid inverters with the latest technologies
+        and frameworks. We are a team of passionate developers and designers who
+        love to build amazing products. Our solar hybrid inverters are designed
+        to provide efficient and reliable energy solutions, combining
+        cutting-edge innovation with exceptional performance
       </p>
     </div>
   );
@@ -163,98 +179,83 @@ const ProductCard = ({
 export function Solutions() {
   return <ProjectParallax products={products} />;
 }
-export const products = [
+const products = [
   {
     title: "Moonbeam",
-    link: "https://gomoonbeam.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+    link: "//",
+    thumbnail: sol1,
   },
   {
     title: "Cursor",
     link: "https://cursor.so",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+    thumbnail: sol2,
   },
   {
     title: "Rogue",
     link: "https://userogue.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+    thumbnail: sol3,
   },
 
   {
     title: "Editorially",
     link: "https://editorially.org",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+    thumbnail: sol4,
   },
   {
     title: "Editrix AI",
     link: "https://editrix.ai",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+    thumbnail: sol5,
   },
   {
     title: "Pixel Perfect",
     link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+    thumbnail: sol6,
   },
 
   {
     title: "Algochurn",
     link: "https://algochurn.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+    thumbnail: sol7,
   },
   {
     title: "Aceternity UI",
     link: "https://ui.aceternity.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+    thumbnail: sol8,
   },
   {
     title: "Tailwind Master Kit",
     link: "https://tailwindmasterkit.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+    thumbnail: sol9,
   },
   {
     title: "SmartBridge",
     link: "https://smartbridgetech.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+    thumbnail: sol10,
   },
   {
     title: "Renderwork Studio",
     link: "https://renderwork.studio",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+    thumbnail: sol11,
   },
 
   {
     title: "Creme Digital",
     link: "https://cremedigital.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+    thumbnail: sol12,
   },
   {
     title: "Golden Bells Academy",
     link: "https://goldenbellsacademy.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+    thumbnail: sol13,
   },
   {
     title: "Invoker Labs",
     link: "https://invoker.lol",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+    thumbnail: sol14,
   },
   {
     title: "E Free Invoice",
     link: "https://efreeinvoice.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+    thumbnail: sol15,
   },
 ];

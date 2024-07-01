@@ -9,9 +9,11 @@ import {
   Inset,
   Text,
 } from "@radix-ui/themes";
-import bg1 from "../../assets/images/view-futuristic-mystical-other-worldly-sky.jpg";
-import bg2 from "../../assets/images/sunset-sky-reflects-solar-panel-sustainable-power-generation-generative-ai.jpg";
-import bg3 from "../../assets/images/photovoltaic-solar-power-panel-field-green-clean-alternative-power-energy-concept-ai-generative.jpg";
+import bg1 from "../../assets/images/sunset-sky-reflects-solar-panel-sustainable-power-generation-generative-ai.jpg";
+import bg2 from "../../assets/images/serve.jpg";
+import bg3 from "../../assets/images/c3.jpg";
+import bg4 from "../../assets/images/l2.png";
+import bg5 from "../../assets/images/view-futuristic-mystical-other-worldly-sky.jpg";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Reveal from "@/lib/Reveal";
@@ -116,18 +118,33 @@ export function Services() {
 
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
+    title: "Solar Solutions",
+    description:
+      "We provide end-to-end solar energy solutions, from design and installation to maintenance and support. Our team of experts ensures that your solar energy system is optimized for maximum efficiency and performance.",
     image: bg1,
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
+    title: "Solar Hybrid Inverters",
+    description:
+      "Our solar hybrid inverters combine the best of solar and traditional energy sources to provide seamless power solutions. Designed with the latest technologies, our inverters ensure reliable and efficient energy management for your home or business.",
     image: bg2,
   },
   {
-    title: "The Spirit of Adventure",
-    description: "Embark on exciting journeys and thrilling discoveries.",
+    title: "CCTV Systems",
+    description:
+      "Enhance your security with our state-of-the-art CCTV systems. We offer a variety of cameras and surveillance solutions to keep your property safe and secure, providing peace of mind with 24/7 monitoring.",
     image: bg3,
+  },
+  {
+    title: "Street Lights",
+    description:
+      "Illuminate your streets with our energy-efficient LED street lights. Our products are designed to provide superior lighting performance while reducing energy consumption and maintenance costs.",
+    image: bg5,
+  },
+  {
+    title: "Security Lights",
+    description:
+      "Protect your property with our advanced security lighting solutions. Our range includes motion-activated lights, floodlights, and other security lighting options that deter intruders and enhance safety.",
+    image: bg4,
   },
 ];

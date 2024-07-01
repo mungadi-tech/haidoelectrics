@@ -9,6 +9,13 @@ import img2 from "../../assets/images/long-shot-la-salve-bridge-night-with-highw
 import img3 from "../../assets/images/photovoltaic-solar-power-panel-field-green-clean-alternative-power-energy-concept-ai-generative.jpg";
 import img4 from "../../assets/images/sunset-sky-reflects-solar-panel-sustainable-power-generation-generative-ai.jpg";
 import img5 from "../../assets/images/view-futuristic-mystical-other-worldly-sky.jpg";
+import sys1 from "../../assets/images/s2.png";
+import sys2 from "../../assets/images/s3.png";
+import sys3 from "../../assets/images/p.png";
+import sys4 from "../../assets/images/s1.png";
+import sys5 from "../../assets/images/s2.png";
+import sys6 from "../../assets/images/s2.png";
+import sys7 from "../../assets/images/s2.png";
 import { useRef, useState } from "react";
 import {
   Box,
@@ -36,7 +43,7 @@ const images = [
       <div className="absolute inset-x-0 md:top-40 gap-2 px-10 justify-between flex flex-col md:flex-row">
         <div className="flex flex-col gap-2 mt-24">
           <Heading size={"9"} className="mt-24">
-            SINCE <span className="text-[var(--accent-9)]">2024</span>
+            SINCE <span className="text-[var(--accent-9)]">2020</span>
           </Heading>
           <Text>Solar Solutions, Go Solar with Haido Electrics</Text>
           <div className="mt-2 md:mt-8">
@@ -135,12 +142,17 @@ const images = [
           <div className="md:bg-slate-900/30 bg-slate-900/90 backdrop-blur-sm p-4">
             <Text size={{ md: "6" }}>
               <Em className="p-1">
-                Anern has 10+ years of experience in the lighting industry. We
-                have introduced advanced production equipment, a specialized
-                production line, excellent R & D team, for you to customize
-                solar lighting and led lighting solutions. Our products are
-                ISO9001, CE ROHS, TUV, ISO, FC approved, meeting various
-                certification requirements for different countries.
+                With over a decade of experience in the industry, Haido
+                Electrics brings expertise in solar and LED lighting solutions.
+                We have implemented cutting-edge production equipment,
+                established a dedicated production line, and assembled a
+                proficient R&D team to cater to your customized lighting needs.
+                Our products adhere to international standards such as ISO9001,
+                CE, ROHS, TUV, ISO, and FC certifications, ensuring compliance
+                with diverse regulatory requirements across different regions.
+                At Haido Electrics, we are committed to delivering high-quality
+                solutions that prioritize innovation, reliability, and customer
+                satisfaction.
               </Em>
             </Text>
           </div>
@@ -159,12 +171,10 @@ const images = [
           <div className="md:bg-slate-900/30 bg-slate-900/90 backdrop-blur-sm p-4">
             <Text size={{ md: "6" }}>
               <Em className="p-1">
-                Anern has 10+ years of experience in the lighting industry. We
-                have introduced advanced production equipment, a specialized
-                production line, excellent R & D team, for you to customize
-                solar lighting and led lighting solutions. Our products are
-                ISO9001, CE ROHS, TUV, ISO, FC approved, meeting various
-                certification requirements for different countries.
+                We have implemented cutting-edge production equipment,
+                established a dedicated production line, and assembled a
+                proficient R&D team to cater to your customized solar energy
+                needs. Our solar panels adhere to international standards
               </Em>
             </Text>
           </div>
@@ -183,12 +193,10 @@ const images = [
           <div className="md:bg-slate-900/30 bg-slate-900/90 backdrop-blur-sm p-4">
             <Text size={{ md: "6" }}>
               <Em className="p-1">
-                Anern has 10+ years of experience in the lighting industry. We
-                have introduced advanced production equipment, a specialized
-                production line, excellent R & D team, for you to customize
-                solar lighting and led lighting solutions. Our products are
-                ISO9001, CE ROHS, TUV, ISO, FC approved, meeting various
-                certification requirements for different countries.
+                We have implemented cutting-edge production equipment,
+                established a dedicated production line, and assembled a
+                proficient R&D team to cater to your customized solar energy
+                needs. Our solar panels adhere to international standards
               </Em>
             </Text>
           </div>
@@ -207,12 +215,9 @@ const images = [
           <div className="md:bg-slate-900/30 bg-slate-900/90 backdrop-blur-sm p-4">
             <Text size={{ md: "6" }}>
               <Em className="p-1">
-                Anern has 10+ years of experience in the lighting industry. We
-                have introduced advanced production equipment, a specialized
-                production line, excellent R & D team, for you to customize
-                solar lighting and led lighting solutions. Our products are
-                ISO9001, CE ROHS, TUV, ISO, FC approved, meeting various
-                certification requirements for different countries.
+                At Haido Electrics, we are devoted to delivering exceptional
+                solutions that emphasize innovation, dependability, and customer
+                satisfaction.
               </Em>
             </Text>
           </div>
@@ -241,12 +246,15 @@ function Navbar({
             isScrolling={isScrolling}
           >
             <div className="flex flex-col space-y-4 text-sm z-50">
-              <HoveredLink href="/web-dev">Web Development</HoveredLink>
-              <HoveredLink href="/interface-design">
-                Interface Design
+              <HoveredLink href="/web-dev">
+                Best Design Solar Street Light
               </HoveredLink>
-              <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-              <HoveredLink href="/branding">Branding</HoveredLink>
+              <HoveredLink href="/interface-design">
+                Solar Garden Light
+              </HoveredLink>
+              <HoveredLink href="/seo">Solar Flood Light</HoveredLink>
+              <HoveredLink href="/branding">LED Outdoor Light</HoveredLink>
+              <HoveredLink href="/branding">LED Indoor Light</HoveredLink>
             </div>
           </MenuItem>
           <MenuItem
@@ -257,27 +265,45 @@ function Navbar({
           >
             <div className="  text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
-                title="Algochurn"
+                title="Hybrid Solar Inverter"
                 href="https://algochurn.com"
-                src="https://assets.aceternity.com/demos/algochurn.webp"
+                src={sys1}
                 description="Prepare for tech interviews like never before."
               />
               <ProductItem
-                title="Tailwind Master Kit"
+                title="Solar Battery"
                 href="https://tailwindmasterkit.com"
-                src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                src={sys2}
                 description="Production ready Tailwind css components for your next project"
               />
               <ProductItem
-                title="Moonbeam"
+                title="Solar Panel"
                 href="https://gomoonbeam.com"
-                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
+                src={sys3}
                 description="Never write from scratch again. Go from idea to blog in minutes."
               />
               <ProductItem
-                title="Rogue"
+                title="Off/On Grid Solar System"
                 href="https://userogue.com"
-                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+                src={sys4}
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              />
+              <ProductItem
+                title="Solar Storage System"
+                href="https://userogue.com"
+                src={sys5}
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              />
+              <ProductItem
+                title="Low Frequency Solar Inverter"
+                href="https://userogue.com"
+                src={sys6}
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              />
+              <ProductItem
+                title="Solar Controller"
+                href="https://userogue.com"
+                src={sys7}
                 description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
               />
             </div>
@@ -289,10 +315,11 @@ function Navbar({
             item="Solutions"
           >
             <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/hobby">Hobby</HoveredLink>
-              <HoveredLink href="/individual">Individual</HoveredLink>
-              <HoveredLink href="/team">Team</HoveredLink>
-              <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+              <HoveredLink href="/hobby">Solar Light Solutions</HoveredLink>
+              <HoveredLink href="/individual">
+                Solar Power System Solutions
+              </HoveredLink>
+              <HoveredLink href="/team">LED Light Solutions</HoveredLink>
             </div>
           </MenuItem>
           <Box>

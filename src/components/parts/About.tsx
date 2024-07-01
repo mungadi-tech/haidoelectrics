@@ -41,23 +41,19 @@ export function About() {
               <Flex gap={"5"} direction={"column"}>
                 <Box>
                   <Text size={{ initial: "1", md: "5", lg: "5", xl: "5" }}>
-                    Established in 2009, Anern has been adhering to the concept
-                    of continuous self-transcendence and seeking common growth.
-                    Committed to making the world better with green energy
-                    solutions, efficient lighting, and energy-saving
-                    technologies. Through innovative technology, advanced
-                    production equipment and an excellent R&D team, Anern has
-                    provided high-quality solar energy products and satisfactory
-                    services to more than 10,000 users around the world.
-                  </Text>
-                  <br />
-                  <Text size={{ initial: "1", md: "5", lg: "5", xl: "5" }}>
-                    Committed to making the world better with green energy
-                    solutions, efficient lighting, and energy-saving
-                    technologies. Through innovative technology, advanced
-                    production equipment and an excellent R&D team, Anern has
-                    provided high-quality solar energy products and satisfactory
-                    services to more than 10,000 users around the world.
+                    Established by Dr. Shamsusdeen in Sokoto, Haido Electrics
+                    has been dedicated to continuous innovation and sustainable
+                    growth since its inception. Specializing in solar solutions,
+                    advanced street lighting, security inverters, and CCTV
+                    installations, we are committed to improving communities
+                    through green energy solutions and efficient technologies.
+                    With a focus on quality and customer satisfaction, Haido
+                    Electrics leverages innovative technology, state-of-the-art
+                    production facilities, and a skilled R&D team to deliver
+                    high-performance solar products and reliable services. Our
+                    mission is to empower global users with dependable energy
+                    solutions that enhance safety, efficiency, and environmental
+                    sustainability.{" "}
                   </Text>
                 </Box>
                 <Box>

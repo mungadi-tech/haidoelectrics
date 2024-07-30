@@ -20,11 +20,11 @@ const flinks = [
 ];
 
 const fservices = [
-  { name: "Solar Light" },
-  { name: "Solar Street Light" },
-  { name: "Solar Light" },
-  { name: "Solar Light Solutions" },
-  { name: "Solar Light Projects" },
+  { name: "Electrical Installation" },
+  { name: "Electrical Repair" },
+  { name: "Estimation" },
+  { name: "Supply" },
+  { name: " CCTV Installation" },
 ];
 export const Footer = () => {
   return (
@@ -43,7 +43,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div>
-            <h1 className="text-2xl mb-4 font-mono">Solar & LED Light</h1>
+            <h1 className="text-2xl mb-4 font-mono">Services</h1>
             <ul className="flex flex-col gap-4 font-serif">
               {fservices.map((d) => (
                 <li key={d.name} className="flex gap-2 ">
@@ -70,28 +70,28 @@ export const Footer = () => {
             <ul className="flex flex-col gap-4">
               <li className="flex gap-2 font-serif items-center">
                 <MapPin className="text-white h-6 w-6" />
-                No. 1 Agaie Road, K7 Mall, Sokoto State, Nigeria 840212
+                Modibbo Adama Rd Sokoto, Nigeria. 840212
               </li>
               <li className="flex gap-2 items-center font-serif">
                 <Phone className="text-white h-6 w-6" />
                 <div className="flex flex-col">
-                  <span>+234(0)7020334144</span>
-                  <span>+234(0)8032844178</span>
+                  <span>+234(0)8033323030</span>
+                  
                 </div>
               </li>
               <li className="flex items-center gap-2 font-serif">
                 <MessageSquare className="text-white h-6 w-6" />
-                <span>info@haidoelectrics.com</span>
+                <span>haidoelectrics@gmail.com</span>
               </li>
             </ul>
           </div>
         </div>
         <div className="text-center my-14">
-          &copy; Copyright{" "}
+          &copy; Copyright
           <span className="font-bold text-secondary"> Haido Electrics. </span>
           All Rights Reserved
           <p>
-            Designed by{" "}
+            Designed by
             <span className="font-bold">Brightedge Technology Solutions</span>
           </p>
         </div>

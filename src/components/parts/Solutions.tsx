@@ -124,11 +124,8 @@ const Header = () => {
         System & Lighting Solutions
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We sell beautiful solar hybrid inverters with the latest technologies
-        and frameworks. We are a team of passionate developers and designers who
-        love to build amazing products. Our solar hybrid inverters are designed
-        to provide efficient and reliable energy solutions, combining
-        cutting-edge innovation with exceptional performance
+      A leading provider of comprehensive electrical, solar, and security solutions, offering installation, repair, estimation, and supply services to meet the diverse needs of our clients. Our team of expert electricians, solar professionals, and security specialists is dedicated to delivering high-quality, efficient, and sustainable solutions that exceed customer expectations.
+
       </p>
     </div>
   );

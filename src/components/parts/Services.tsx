@@ -9,11 +9,11 @@ import {
   Inset,
   Text,
 } from "@radix-ui/themes";
-import bg1 from "../../assets/images/sunset-sky-reflects-solar-panel-sustainable-power-generation-generative-ai.jpg";
+import bg1 from "../../assets/images/electric.jpg";
 import bg2 from "../../assets/images/serve.jpg";
 import bg3 from "../../assets/images/c3.jpg";
-import bg4 from "../../assets/images/l2.png";
-import bg5 from "../../assets/images/view-futuristic-mystical-other-worldly-sky.jpg";
+import bg4 from "../../assets/images/estimation.jpg";
+import bg5 from "../../assets/images/supply.jpg";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Reveal from "@/lib/Reveal";
@@ -40,32 +40,32 @@ export function Services() {
               <div className="md:p-10 p-5 bg-primary rounded-full">
                 <Award />
               </div>
-              <Text align={"center"} size={"1"}>
-                15 Years experience in solar energy manufacturing industry.
+              <Text align={"center"} size={"3"}>
+                5 Years experience in solar energy industry.
               </Text>
             </Flex>
             <Flex direction={"column"} align={"center"} justify={"center"}>
               <div className="md:p-10 p-5 bg-primary rounded-full">
                 <Award />
               </div>
-              <Text align={"center"} size={"1"}>
-                15 Years experience in solar energy manufacturing industry.
+              <Text align={"center"} size={"3"}>
+                Our Products have 2 Years Warranty.
               </Text>
             </Flex>
             <Flex direction={"column"} align={"center"} justify={"center"}>
               <div className="md:p-10 p-5 bg-primary rounded-full">
                 <Award />
               </div>
-              <Text align={"center"} size={"1"}>
-                15 Years experience in solar energy manufacturing industry.
+              <Text align={"center"} size={"3"}>
+                Home Delevery and Installation.
               </Text>
             </Flex>
             <Flex direction={"column"} align={"center"} justify={"center"}>
               <div className="md:p-10 p-5 bg-primary rounded-full">
                 <Award />
               </div>
-              <Text align={"center"} size={"1"}>
-                15 Years experience in solar energy manufacturing industry.
+              <Text align={"center"} size={"3"}>
+                Project Estimation
               </Text>
             </Flex>
           </Grid>
@@ -118,33 +118,33 @@ export function Services() {
 
 const items = [
   {
-    title: "Solar Solutions",
+    title: "Electrical Installation",
     description:
-      "We provide end-to-end solar energy solutions, from design and installation to maintenance and support. Our team of experts ensures that your solar energy system is optimized for maximum efficiency and performance.",
-    image: bg1,
-  },
-  {
-    title: "Solar Hybrid Inverters",
-    description:
-      "Our solar hybrid inverters combine the best of solar and traditional energy sources to provide seamless power solutions. Designed with the latest technologies, our inverters ensure reliable and efficient energy management for your home or business.",
+      " Residential, Commercial, and Industrial",
     image: bg2,
   },
   {
-    title: "CCTV Systems",
+    title: "Electrical Repair",
     description:
-      "Enhance your security with our state-of-the-art CCTV systems. We offer a variety of cameras and surveillance solutions to keep your property safe and secure, providing peace of mind with 24/7 monitoring.",
-    image: bg3,
+      " Fault finding, troubleshooting, and maintenance",
+    image: bg1,
   },
   {
-    title: "Street Lights",
+    title: "Estimation",
     description:
-      "Illuminate your streets with our energy-efficient LED street lights. Our products are designed to provide superior lighting performance while reducing energy consumption and maintenance costs.",
+      "Accurate quotes for electrical, solar, and security projects",
+    image: bg4,
+  },
+  {
+    title: "Supply",
+    description:
+      "Top-quality electrical, solar, and security equipment",
     image: bg5,
   },
   {
-    title: "Security Lights",
+    title: "CCTV Installation",
     description:
-      "Protect your property with our advanced security lighting solutions. Our range includes motion-activated lights, floodlights, and other security lighting options that deter intruders and enhance safety.",
-    image: bg4,
+      "Design, installation, and configuration of CCTV systems for residential and commercial properties",
+    image: bg3,
   },
 ];

@@ -45,7 +45,7 @@ const images = [
           <Heading size={"9"} className="mt-24">
             SINCE <span className="text-[var(--accent-9)]">2020</span>
           </Heading>
-          <Text>Solar Solutions, Go Solar with Haido Electrics</Text>
+          <Text> Empowering Your Future with Electrical, Solar, and Security Solutions</Text>
           <div className="mt-2 md:mt-8">
             <Button size={{ lg: "4" }}>
               More Haido Solar <ArrowRight />
@@ -54,7 +54,7 @@ const images = [
         </div>
         <div className="flex flex-col justify-between lg:gap-4 w-80 lg:w-96">
           <div className="flex flex-col gap-2">
-            <Heading size={"7"}>10+</Heading>
+            <Heading size={"7"}>5+</Heading>
             <div className="flex justify-between items-center ">
               <Text>Years in Solar Industry</Text>
               <IconButton>
@@ -69,9 +69,9 @@ const images = [
           />
 
           <div className="flex flex-col gap-2">
-            <Heading size={"7"}>10+</Heading>
+            <Heading size={"7"}>20+</Heading>
             <div className="flex justify-between items-center ">
-              <Text>Years in SOlar Industry</Text>
+              <Text>State Delivery</Text>
               <IconButton>
                 <Diamond />
               </IconButton>
@@ -84,9 +84,9 @@ const images = [
           />
 
           <div className="flex flex-col gap-2">
-            <Heading size={"7"}>10+</Heading>
+            <Heading size={"7"}>200+</Heading>
             <div className="flex justify-between items-center ">
-              <Text>Years in SOlar Industry</Text>
+              <Text>Installations</Text>
               <IconButton>
                 <Diamond />
               </IconButton>
@@ -99,24 +99,9 @@ const images = [
           />
 
           <div className="flex flex-col gap-2">
-            <Heading size={"7"}>10+</Heading>
+            <Heading size={"7"}>100+</Heading>
             <div className="flex justify-between items-center ">
-              <Text>Years in SOlar Industry</Text>
-              <IconButton>
-                <Diamond />
-              </IconButton>
-            </div>
-          </div>
-          <Separator
-            size={"4"}
-            my={"3"}
-            style={{ backgroundColor: "var(--accent-1)" }}
-          />
-
-          <div className="flex flex-col gap-2">
-            <Heading size={"7"}>10+</Heading>
-            <div className="flex justify-between items-center ">
-              <Text>Years in SOlar Industry</Text>
+              <Text>Electric Products</Text>
               <IconButton>
                 <Diamond />
               </IconButton>
@@ -137,22 +122,12 @@ const images = [
       <div className="absolute justify-center inset-0 mx-auto text-center md:top-56 md:px-10 h-full w-full md:container  items-center">
         <div className="md:px-20 mt-48 md:mt-32 container">
           <Heading size={"9"} mb={"6"} className="mt-24">
-            Haido Electrics.
+            Mission
           </Heading>
           <div className="md:bg-slate-900/30 bg-slate-900/90 backdrop-blur-sm p-4">
             <Text size={{ md: "6" }}>
               <Em className="p-1">
-                With over a decade of experience in the industry, Haido
-                Electrics brings expertise in solar and LED lighting solutions.
-                We have implemented cutting-edge production equipment,
-                established a dedicated production line, and assembled a
-                proficient R&D team to cater to your customized lighting needs.
-                Our products adhere to international standards such as ISO9001,
-                CE, ROHS, TUV, ISO, and FC certifications, ensuring compliance
-                with diverse regulatory requirements across different regions.
-                At Haido Electrics, we are committed to delivering high-quality
-                solutions that prioritize innovation, reliability, and customer
-                satisfaction.
+              To provide innovative, reliable, and cost-effective electrical, solar, and security solutions that enhance our customers' lives, protect their properties, and contribute to a sustainable future
               </Em>
             </Text>
           </div>
@@ -166,15 +141,12 @@ const images = [
       <div className="absolute justify-center inset-0 mx-auto text-center md:top-56 md:px-10 h-full w-full md:container  items-center">
         <div className="md:px-20 mt-48 md:mt-32 container">
           <Heading size={"9"} mb={"6"} className="mt-24">
-            Solar Street Light.
+          Excellence
           </Heading>
           <div className="md:bg-slate-900/30 bg-slate-900/90 backdrop-blur-sm p-4">
             <Text size={{ md: "6" }}>
               <Em className="p-1">
-                We have implemented cutting-edge production equipment,
-                established a dedicated production line, and assembled a
-                proficient R&D team to cater to your customized solar energy
-                needs. Our solar panels adhere to international standards
+              Delivering high-quality services and products
               </Em>
             </Text>
           </div>
@@ -188,15 +160,14 @@ const images = [
       <div className="absolute justify-center inset-0 mx-auto text-center md:top-56 md:px-10 h-full w-full md:container  items-center">
         <div className="md:px-20 mt-48 md:mt-32 container">
           <Heading size={"9"} mb={"6"} className="mt-24">
-            Solar Panel.
+          Integrity
           </Heading>
           <div className="md:bg-slate-900/30 bg-slate-900/90 backdrop-blur-sm p-4">
             <Text size={{ md: "6" }}>
               <Em className="p-1">
-                We have implemented cutting-edge production equipment,
-                established a dedicated production line, and assembled a
-                proficient R&D team to cater to your customized solar energy
-                needs. Our solar panels adhere to international standards
+              Honesty, transparency, and trustworthiness
+- Sustainability: Promoting eco-friendly solutions and practices
+
               </Em>
             </Text>
           </div>
@@ -210,14 +181,13 @@ const images = [
       <div className="absolute justify-center inset-0 mx-auto text-center md:top-56 md:px-10 h-full w-full md:container  items-center">
         <div className="md:px-20 mt-48 md:mt-32 container">
           <Heading size={"9"} mb={"6"} className="mt-24">
-            Hybrid Solar Inverter.
+          Customer Focus
           </Heading>
           <div className="md:bg-slate-900/30 bg-slate-900/90 backdrop-blur-sm p-4">
             <Text size={{ md: "6" }}>
               <Em className="p-1">
-                At Haido Electrics, we are devoted to delivering exceptional
-                solutions that emphasize innovation, dependability, and customer
-                satisfaction.
+              Tailoring our services to meet individual needs
+        
               </Em>
             </Text>
           </div>
@@ -419,8 +389,7 @@ export function Header() {
                 </div>
 
                 <div className="flex flex-col">
-                  <span>+234(0)7020334144</span>
-                  <span>+234(0)8032844178</span>
+                  <span>+234(0)8033323030</span>
                 </div>
               </div>
 
@@ -428,7 +397,7 @@ export function Header() {
                 <div className="bg-secondary/20 p-2 rounded-full">
                   <Mail className="text-primary-50 h-4 w-4" />
                 </div>
-                <span>info@haidoelectrics.com</span>
+                <span>haidoelectrics@gmail.com</span>
               </div>
             </div>
           </Flex>

@@ -10,7 +10,7 @@ import {
   Section,
   Text,
 } from "@radix-ui/themes";
-import img1 from "../../assets/images/long-shot-la-salve-bridge-night-with-highway-lights-unique-bridge-arc-bilbao-spain.jpg";
+import img1 from "../../assets/images/view-futuristic-mystical-other-worldly-sky.jpg";
 import { CircleArrowRight } from "lucide-react";
 import Reveal from "@/lib/Reveal";
 
@@ -41,20 +41,8 @@ export function About() {
               <Flex gap={"5"} direction={"column"}>
                 <Box>
                   <Text size={{ initial: "1", md: "5", lg: "5", xl: "5" }}>
-                    Established by Dr. Shamsusdeen in Sokoto, Haido Electrics
-                    has been dedicated to continuous innovation and sustainable
-                    growth since its inception. Specializing in solar solutions,
-                    advanced street lighting, security inverters, and CCTV
-                    installations, we are committed to improving communities
-                    through green energy solutions and efficient technologies.
-                    With a focus on quality and customer satisfaction, Haido
-                    Electrics leverages innovative technology, state-of-the-art
-                    production facilities, and a skilled R&D team to deliver
-                    high-performance solar products and reliable services. Our
-                    mission is to empower global users with dependable energy
-                    solutions that enhance safety, efficiency, and environmental
-                    sustainability.{" "}
-                  </Text>
+                  HAIDO ELECTRICS is a well-established company with a team of experienced professionals passionate about electrical, solar, and security technology. With years of expertise in the industry, we have built a reputation for delivering high-quality services
+                  and innovative solutions that meet the evolving needs of our clients.</Text>
                 </Box>
                 <Box>
                   <Button size={"1"}>

@@ -30,7 +30,6 @@ import {
   Text,
 } from "@radix-ui/themes";
 import {
-  HoveredLink,
   Menu,
   MenuItem,
   ProductItem,
@@ -206,25 +205,76 @@ function Navbar({
 }) {
   const [active, setActive] = useState<string | null>(null);
   return (
-    <div className={cn("z-50", className)}>
+    <div className={cn("z-50 ", className)}>
       <div className="hidden md:block">
         <Menu setActive={setActive}>
-          <MenuItem
+        <MenuItem
+            isScrolling={isScrolling}
             setActive={setActive}
             active={active}
-            item="Solar & LED Light"
-            isScrolling={isScrolling}
+            item="Electrical"
           >
-            <div className="flex flex-col space-y-4 text-sm z-50">
-              <HoveredLink href="/web-dev">
-                Best Design Solar Street Light
-              </HoveredLink>
-              <HoveredLink href="/interface-design">
-                Solar Garden Light
-              </HoveredLink>
-              <HoveredLink href="/seo">Solar Flood Light</HoveredLink>
-              <HoveredLink href="/branding">LED Outdoor Light</HoveredLink>
-              <HoveredLink href="/branding">LED Indoor Light</HoveredLink>
+            <div className="overflow-auto text-sm grid grid-cols-2 gap-10 p-4">
+              <ProductItem
+                title="Smart Meters"
+                href=""
+                src={sys1}
+                description="Prepare for tech interviews like never before."
+              />
+              <ProductItem
+                title="Energy Storage System ESS"
+                href=""
+                src={sys2}
+                description="Production ready Tailwind css components for your next project"
+              />
+              <ProductItem
+                title="Electric Vehicle Charging Stations"
+                href=""
+                src={sys3}
+                description="Never write from scratch again. Go from idea to blog in minutes."
+              />
+              <ProductItem
+                title="High-Efficiency Motors"
+                href=""
+                src={sys4}
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              />
+              <ProductItem
+                title="Power Quality Analyzers"
+                href=""
+                src={sys5}
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              />
+              <ProductItem
+                title="Circuit Breakers and Switchgear"
+                href=""
+                src={sys6}
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              />
+              <ProductItem
+                title="Electrical Distribution Boards"
+                href=""
+                src={sys7}
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              />
+              <ProductItem
+                title="Industrial Automation Systems"
+                href=""
+                src={sys7}
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              />
+               <ProductItem
+                title="LED Lighting Systems"
+                href=""
+                src={sys7}
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              />
+              <ProductItem
+                title="Surge Protection Devices SPDs"
+                href=""
+                src={sys7}
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              /> 
             </div>
           </MenuItem>
           <MenuItem
@@ -235,43 +285,43 @@ function Navbar({
           >
             <div className="  text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
-                title="Hybrid Solar Inverter"
+                title="High-Efficiency Solar Panels"
                 href="https://algochurn.com"
                 src={sys1}
                 description="Prepare for tech interviews like never before."
               />
               <ProductItem
-                title="Solar Battery"
+                title="Solar Inverters"
                 href="https://tailwindmasterkit.com"
                 src={sys2}
                 description="Production ready Tailwind css components for your next project"
               />
               <ProductItem
-                title="Solar Panel"
+                title="Solar Battery Storage System"
                 href="https://gomoonbeam.com"
                 src={sys3}
                 description="Never write from scratch again. Go from idea to blog in minutes."
               />
               <ProductItem
-                title="Off/On Grid Solar System"
+                title="Solar System Water Pumps"
                 href="https://userogue.com"
                 src={sys4}
                 description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
               />
               <ProductItem
-                title="Solar Storage System"
+                title="Solar Street Lights"
                 href="https://userogue.com"
                 src={sys5}
                 description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
               />
               <ProductItem
-                title="Low Frequency Solar Inverter"
+                title="Solar Home Systems"
                 href="https://userogue.com"
                 src={sys6}
                 description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
               />
               <ProductItem
-                title="Solar Controller"
+                title="Solar Charge Controller"
                 href="https://userogue.com"
                 src={sys7}
                 description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
@@ -282,14 +332,53 @@ function Navbar({
             isScrolling={isScrolling}
             setActive={setActive}
             active={active}
-            item="Solutions"
+            item="CCTV"
           >
-            <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/hobby">Solar Light Solutions</HoveredLink>
-              <HoveredLink href="/individual">
-                Solar Power System Solutions
-              </HoveredLink>
-              <HoveredLink href="/team">LED Light Solutions</HoveredLink>
+            <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+              <ProductItem
+                title="IP Cameras (4K, PTZ, and Night Vision)"
+                href="https://algochurn.com"
+                src={sys1}
+                description="Prepare for tech interviews like never before."
+              />
+              <ProductItem
+                title=" CCTV Recorders (NVRs and DVRs)"
+                href="https://tailwindmasterkit.com"
+                src={sys2}
+                description="Production ready Tailwind css components for your next project"
+              />
+              <ProductItem
+                title="Video Management Software (VMS)"
+                href="https://gomoonbeam.com"
+                src={sys3}
+                description="Never write from scratch again. Go from idea to blog in minutes."
+              />
+              <ProductItem
+                title=" Access Control Systems"
+                href="https://userogue.com"
+                src={sys4}
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              />
+              <ProductItem
+                title=" Intrusion Detection Systems
+"
+                href="https://userogue.com"
+                src={sys5}
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              />
+              <ProductItem
+                title="Smart Doorbells with Cameras
+"
+                href="https://userogue.com"
+                src={sys6}
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              />
+              <ProductItem
+                title="Wireless CCTV Systems"
+                href="https://userogue.com"
+                src={sys7}
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              />
             </div>
           </MenuItem>
           <Box>
